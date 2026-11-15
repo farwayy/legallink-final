@@ -1,0 +1,9 @@
+{
+  "id": "6890faeb-d083-4031-83e6-75874a982d34",
+  "name": "legal_category",
+  "isOverridable": true,
+  "isEnum": false,
+  "isRegexp": false,
+  "automatedExpansion": false,
+  "allowFulfillmentCommit": false
+}

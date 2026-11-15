@@ -1,0 +1,28 @@
+{
+  "id": "0f1f0dc8-15e2-47af-8fb8-9db45e9cbd27",
+  "name": "legal.labor.unpaid_wages",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.labor.unpaid_wages",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Under the Payment of Wages Act 1936 and provincial industrial relations legislation, employers cannot unlawfully withhold earned wages or terminate employment without written cause and notice pay. For workplace harassment, you can file an immediate complaint before the Federal or Provincial Ombudsperson under the 2010 Protection Act."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

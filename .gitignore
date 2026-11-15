@@ -1,0 +1,29 @@
+# ── Dependencies (recreated with npm install / pip install) ──
+node_modules/
+__pycache__/
+*.pyc
+venv/
+.venv/
+
+# ── Secrets: NEVER put these on GitHub ──
+.env
+.env.*
+!.env.example
+**/dialogflow-key.json
+*-key.json
+*.pem
+
+# ── Files people upload (CNIC scans, Bar Council documents, case evidence) ──
+backend/uploads/*
+!backend/uploads/.gitkeep
+
+# ── Build output and logs ──
+frontend/build/
+*.log
+npm-debug.log*
+
+# ── Editor / system files ──
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

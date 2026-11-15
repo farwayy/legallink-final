@@ -1,0 +1,27 @@
+/* Announcement banner shown at the top of the citizen, advocate and NGO portals.
+   Also used for the live preview in the admin console. */
+.an-stack { display: flex; flex-direction: column; }
+.an-banner {
+  --an-bg: #EAF3EE; --an-border: #CFE3D7; --an-text: #163428; --an-icon: #1E3F2E;
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 11px 20px; background: var(--an-bg); border-bottom: 1px solid var(--an-border);
+  color: var(--an-text); font-size: 14px; line-height: 1.5;
+}
+.an-banner.is-warning { --an-bg: #FFF6E5; --an-border: #F5DDA8; --an-text: #6B3F06; --an-icon: #B45309; }
+.an-banner.is-success { --an-bg: #EAF7EF; --an-border: #BFE6CD; --an-text: #14532D; --an-icon: #15803D; }
+html[data-theme="dark"] .an-banner { --an-bg: #12261C; --an-border: #1F3A2C; --an-text: #D7E7DE; --an-icon: #8FD3AE; }
+html[data-theme="dark"] .an-banner.is-warning { --an-bg: #2A1E0B; --an-border: #4A3410; --an-text: #F6DDB0; --an-icon: #F2B35B; }
+html[data-theme="dark"] .an-banner.is-success { --an-bg: #0F2618; --an-border: #1C4A2D; --an-text: #CDEBD8; --an-icon: #6FD39A; }
+.an-banner-inner { display: flex; align-items: flex-start; gap: 12px; width: 100%; max-width: 1280px; margin: 0 auto; }
+.an-icon { flex-shrink: 0; margin-top: 2px; color: var(--an-icon); }
+.an-body { flex: 1; min-width: 0; }
+.an-body strong { font-weight: 650; margin-right: 6px; }
+.an-body a { color: inherit; font-weight: 600; text-decoration: underline; text-underline-offset: 2px; margin-left: 6px; white-space: nowrap; }
+.an-close {
+  flex-shrink: 0; width: 28px; height: 28px; margin: -3px -6px 0 0; border: 0; border-radius: 6px;
+  background: transparent; color: inherit; opacity: 0.7; cursor: pointer; display: grid; place-items: center;
+}
+.an-close:hover { opacity: 1; background: rgba(0, 0, 0, 0.06); }
+html[data-theme="dark"] .an-close:hover { background: rgba(255, 255, 255, 0.08); }
+.an-banner.is-preview { border: 1px solid var(--an-border); border-radius: 10px; }
+@media (max-width: 600px) { .an-banner { padding: 10px 14px; font-size: 13.5px; } }

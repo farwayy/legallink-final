@@ -1,0 +1,28 @@
+{
+  "id": "18dfb396-0a40-4f39-9e6e-72f7f3546b24",
+  "name": "legal.family.child_custody",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.family.child_custody",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Under the Guardians and Wards Act 1890, custody (Hizanat) decisions prioritize the 'welfare of the minor'. Generally, mothers retain physical custody of minor sons and daughters, while fathers remain natural guardians responsible for maintenance (Kharcha). You can file an application for interim maintenance immediately in the Family Court."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

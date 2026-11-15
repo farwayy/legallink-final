@@ -1,0 +1,28 @@
+{
+  "id": "6e2d21ca-7dde-42a7-820b-47426d9850a8",
+  "name": "legal.family.khula_divorce",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.family.khula_divorce",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Under the Family Courts Act 1964 and Dissolution of Muslim Marriages Act 1939, a wife can seek Khula through the Family Court. The court concludes Khula proceedings within 3 to 6 months. Following a court decree, notice must be sent to the local Union Council under Section 7 of the Muslim Family Laws Ordinance 1961 to make the divorce legally effective."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

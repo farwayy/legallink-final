@@ -1,0 +1,28 @@
+{
+  "id": "94f84aaa-cd96-4c46-9396-a1f1f31d24a6",
+  "name": "legal.criminal.fir_bail",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.criminal.fir_bail",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Under the Code of Criminal Procedure (CrPC), you can apply for Pre-Arrest Bail under Section 498 before the Sessions Court or High Court to prevent unlawful detention. If the police refuse to register an FIR for a cognizable offence, you can file a Section 22-A/22-B petition before the Ex-Officio Justice of Peace (Sessions Judge)."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

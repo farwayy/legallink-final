@@ -1,0 +1,163 @@
+:root,
+html[data-theme="light"],
+body[data-theme="light"] {
+  --lawyer-page-bg: #F8FAFC;
+  --lawyer-surface: #FFFFFF;
+  --lawyer-surface-raised: #F1F5F9;
+  --lawyer-text: #0F172A;
+  --lawyer-muted: #475569;
+  --lawyer-border: #E2E8F0;
+  --lawyer-accent: #1E3F2E;
+  --lawyer-accent-soft: #E8F5E9;
+}
+
+html[data-theme="dark"],
+html.dark,
+body[data-theme="dark"],
+body.dark {
+  --lawyer-page-bg: #07110D;
+  --lawyer-surface: #0E1A15;
+  --lawyer-surface-raised: #15241D;
+  --lawyer-text: #F1F5F2;
+  --lawyer-muted: #8FA39A;
+  --lawyer-border: #1C2E26;
+  --lawyer-accent: #D4AF37;
+  --lawyer-accent-soft: rgba(212, 175, 55, 0.14);
+}
+
+body.lawyer-portal-active {
+  min-height: 100vh;
+  color: var(--lawyer-text);
+  background-color: var(--lawyer-page-bg);
+  transition: color 220ms ease, background-color 220ms ease;
+}
+
+body.lawyer-portal-active #root {
+  min-height: 100vh;
+  color: var(--lawyer-text);
+}
+
+/* Lawyer page wrappers */
+.lawyer-portal-page,
+body.lawyer-portal-active .lawyer-portal-page {
+  background-color: var(--lawyer-page-bg) !important;
+  color: var(--lawyer-text) !important;
+  min-height: calc(100vh - 110px);
+}
+
+/* Lawyer Cards */
+body.lawyer-portal-active .legal-card,
+body.lawyer-portal-active .modal-content,
+.lawyer-card {
+  border: 1px solid var(--lawyer-border);
+  border-radius: 16px;
+  color: var(--lawyer-text) !important;
+  background: var(--lawyer-surface) !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  transition: transform 220ms ease, box-shadow 220ms ease, border-color 220ms ease, background 220ms ease;
+}
+
+html[data-theme="dark"] body.lawyer-portal-active .legal-card,
+html[data-theme="dark"] body.lawyer-portal-active .modal-content,
+html[data-theme="dark"] .lawyer-card {
+  box-shadow: 0 14px 34px rgba(0, 0, 0, 0.45);
+}
+
+body.lawyer-portal-active .legal-card:hover,
+.lawyer-card:hover {
+  border-color: var(--lawyer-accent);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+  transform: translateY(-2px);
+}
+
+/* Text inside lawyer cards */
+body.lawyer-portal-active h1:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active h2:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active h3:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active h4:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active h5:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active strong:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+body.lawyer-portal-active b:not(footer *):not(.ll-on-dark *):not(.ll-alert *) {
+  color: var(--lawyer-text) !important;
+}
+
+body.lawyer-portal-active p,
+body.lawyer-portal-active span.lawyer-body-text {
+  color: var(--lawyer-muted);
+}
+
+/* Form Controls */
+body.lawyer-portal-active .legal-input,
+body.lawyer-portal-active .form-control,
+body.lawyer-portal-active .form-select,
+body.lawyer-portal-active textarea {
+  border-color: var(--lawyer-border);
+  color: var(--lawyer-text) !important;
+  background-color: var(--lawyer-surface-raised) !important;
+}
+
+body.lawyer-portal-active .legal-input:focus,
+body.lawyer-portal-active .form-control:focus,
+body.lawyer-portal-active .form-select:focus,
+body.lawyer-portal-active textarea:focus {
+  border-color: var(--lawyer-accent);
+  color: var(--lawyer-text) !important;
+  background-color: var(--lawyer-surface) !important;
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--lawyer-accent) 18%, transparent);
+}
+
+/* Tables */
+body.lawyer-portal-active .table,
+body.lawyer-portal-active .table td,
+body.lawyer-portal-active .table th {
+  border-color: var(--lawyer-border);
+  color: var(--lawyer-text) !important;
+  background-color: transparent !important;
+}
+
+/* Dark mode overrides for hardcoded inline backgrounds in lawyer portal */
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: rgb(248, 250, 252)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: rgb(248, 250, 252)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #F8FAFC"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #F8FAFC"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #f8fafc"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #f8fafc"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: rgb(241, 245, 249)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: rgb(241, 245, 249)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #F1F5F9"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #F1F5F9"] {
+  background-color: var(--lawyer-page-bg) !important;
+}
+
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: rgb(255, 255, 255)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: rgb(255, 255, 255)"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #FFFFFF"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #FFFFFF"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #ffffff"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #ffffff"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="background-color: #fff"],
+html[data-theme="dark"] body.lawyer-portal-active div[style*="backgroundColor: #fff"] {
+  border-color: var(--lawyer-border) !important;
+  color: var(--lawyer-text) !important;
+  background-color: var(--lawyer-surface) !important;
+}
+
+/* Light mode overrides for high-contrast dark fonts */
+html[data-theme="light"] body.lawyer-portal-active h1:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active h2:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active h3:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active h4:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active h5:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active h6:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active strong:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active b:not(footer *):not(.ll-on-dark *):not(.ll-alert *) {
+  color: #0F172A !important;
+}
+
+html[data-theme="light"] body.lawyer-portal-active p:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active small:not(footer *):not(.ll-on-dark *):not(.ll-alert *),
+html[data-theme="light"] body.lawyer-portal-active .text-muted:not(footer *):not(.ll-on-dark *):not(.ll-alert *) {
+  color: #475569 !important;
+}
+
+

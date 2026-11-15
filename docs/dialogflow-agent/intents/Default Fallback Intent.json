@@ -1,0 +1,28 @@
+{
+  "id": "ae60cf9d-4844-4f13-b7a2-2360435d49f5",
+  "name": "Default Fallback Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.unknown",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "I could not identify the specific legal statute for your query. Please provide more details or specify whether your case relates to Family Law, Criminal Law, Property Law, or Domestic Violence."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": true,
+  "events": []
+}

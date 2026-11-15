@@ -1,0 +1,28 @@
+{
+  "id": "af38e49f-bbe3-4ebe-a350-0633357d8641",
+  "name": "legal.domestic_violence.emergency",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.domestic_violence.emergency",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "This is a serious domestic violence matter requiring immediate protection under the Domestic Violence (Prevention and Protection) Act. You are entitled to an emergency Protection Order and Residence Order from the Magistrate Court. We strongly recommend reaching out to our verified Pro-Bono Legal Aid NGOs immediately for legal accompaniment and safe shelter."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

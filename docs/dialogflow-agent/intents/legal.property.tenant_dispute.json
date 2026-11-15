@@ -1,0 +1,28 @@
+{
+  "id": "9cacd19b-ff35-4bd6-9592-38ccff00aa6f",
+  "name": "legal.property.tenant_dispute",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "legal.property.tenant_dispute",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Under the Punjab Rented Premises Act (or provincial tenancy laws), landlords must serve a written legal notice before filing an ejectment petition before the Rent Tribunal. For illegal land grabbing, a direct complaint lies under the Illegal Dispossession Act 2005 before the Court of Sessions with expedited proceedings."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": []
+}

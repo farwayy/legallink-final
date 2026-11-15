@@ -1,0 +1,3 @@
+@echo off
+echo Starting local MongoDB Server on port 27017...
+"d:\FYP Legal Link\mongodb\bin\mongod.exe" --dbpath "d:\FYP Legal Link\mongodb\data" --port 27017 --bind_ip 127.0.0.1

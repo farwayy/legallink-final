@@ -1,0 +1,37 @@
+/* ==========================================================================
+   LegalLink brand name (the "LegalLink" text next to the logo)
+   --------------------------------------------------------------------------
+   This file is imported LAST in src/index.js, and its selectors are more
+   specific than any other rule, so it always wins over older font rules
+   (e.g. an old Holimount / Great Vibes rule somewhere else).
+   To change the brand font, change it here only.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@500;600;700&display=swap');
+
+html body .brand-signature,
+html body .lx-brand .brand-signature,
+html body .cp-brand-name,
+html body .auth-brand-logo span,
+html body .auth-panel-head-logo span {
+  font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  font-style: normal !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1 !important;
+  white-space: nowrap;
+}
+
+/* Sizes */
+html body .brand-signature,
+html body .lx-brand .brand-signature,
+html body .cp-brand-name { font-size: 1.6rem !important; }
+
+html body footer .brand-signature,
+html body .lx-footer-sig.brand-signature { font-size: 2.1rem !important; }
+
+html body .auth-brand-logo span { font-size: 1.65rem !important; }
+html body .auth-panel-head-logo span { font-size: 1.45rem !important; }
+
+@media (max-width: 575px) {
+  html body .lx-brand .brand-signature { font-size: 1.25rem !important; }
+}

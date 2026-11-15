@@ -1,0 +1,257 @@
+/* ==========================================================================
+   NAVBAR HOVER MOTION
+   Shared hover animations for every navigation bar:
+     - Links: underline that grows from the centre + soft glow
+     - Buttons: gentle lift, coloured glow and a light shimmer sweep
+     - Theme toggle: glow ring and icon rotation
+   Colours: forest green in light mode, gold in dark mode (matches the brand).
+   Everything is disabled for users who prefer reduced motion.
+   ========================================================================== */
+
+:root,
+html[data-theme="light"] {
+  --nav-glow: 30, 63, 46;          /* forest green (r, g, b) */
+  --nav-accent: #1E3F2E;
+  --nav-underline: linear-gradient(90deg, #1E3F2E, #B8860B);
+}
+
+html[data-theme="dark"],
+html.dark {
+  --nav-glow: 212, 175, 55;        /* gold (r, g, b) */
+  --nav-accent: #D4AF37;
+  --nav-underline: linear-gradient(90deg, #D4AF37, #F5E6BE);
+}
+
+/* --------------------------------------------------------------------------
+   1. Text links (public navbar, lawyer portal, NGO portal)
+   -------------------------------------------------------------------------- */
+.main-navbar .nav-link,
+.ll-nav-item,
+.ngo-nav-links a {
+  position: relative;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease,
+    text-shadow 0.25s ease,
+    transform 0.25s ease !important;
+}
+
+.main-navbar .nav-link::after,
+.ll-nav-item::after,
+.ngo-nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 2px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: var(--nav-underline);
+  transform: translateX(-50%);
+  transition: width 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+  pointer-events: none;
+}
+
+.main-navbar .nav-link:hover,
+.main-navbar .nav-link:focus-visible,
+.ll-nav-item:hover,
+.ngo-nav-links a:hover {
+  background-color: rgba(var(--nav-glow), 0.07);
+  text-shadow: 0 0 14px rgba(var(--nav-glow), 0.35);
+  box-shadow: 0 0 0 1px rgba(var(--nav-glow), 0.08), 0 6px 18px -10px rgba(var(--nav-glow), 0.55);
+}
+
+.main-navbar .nav-link:hover::after,
+.main-navbar .nav-link:focus-visible::after,
+.ll-nav-item:hover::after,
+.ngo-nav-links a:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Keep the current page marked with a short static underline */
+.main-navbar .nav-link.active::after,
+.main-navbar .nav-link[aria-current="page"]::after,
+.ll-nav-item.is-active::after,
+.ngo-nav-links a.active::after {
+  width: 18px;
+}
+
+.main-navbar .nav-link.active:hover::after,
+.main-navbar .nav-link[aria-current="page"]:hover::after,
+.ll-nav-item.is-active:hover::after,
+.ngo-nav-links a.active:hover::after {
+  width: calc(100% - 24px);
+}
+
+/* Link icons nudge up slightly */
+.ll-nav-item svg,
+.ngo-nav-links a svg {
+  transition: transform 0.25s ease;
+}
+
+.ll-nav-item:hover svg,
+.ngo-nav-links a:hover svg {
+  transform: translateY(-1px) scale(1.08);
+}
+
+/* --------------------------------------------------------------------------
+   2. Buttons (Login, Get Started, Dashboard, Logout, portal sign-out)
+   -------------------------------------------------------------------------- */
+.main-navbar .ll-btn-3d,
+.ll-nav-btn,
+.ngo-nav-logout {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  transition:
+    transform 0.25s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.25s ease,
+    background-color 0.2s ease,
+    border-color 0.2s ease !important;
+}
+
+/* Shimmer sweep */
+.main-navbar .ll-btn-3d::before,
+.ll-nav-btn::before,
+.ngo-nav-logout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background: linear-gradient(
+    110deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.35) 45%,
+    rgba(255, 255, 255, 0.05) 60%,
+    transparent 80%
+  );
+  transform: translateX(-120%);
+  pointer-events: none;
+}
+
+.main-navbar .ll-btn-3d:hover::before,
+.ll-nav-btn:hover::before,
+.ngo-nav-logout:hover::before {
+  animation: nav-shimmer 0.75s ease forwards;
+}
+
+.main-navbar .ll-btn-3d:hover,
+.main-navbar .ll-btn-3d:focus-visible,
+.ll-nav-btn:hover,
+.ngo-nav-logout:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 0 1px rgba(var(--nav-glow), 0.25),
+    0 8px 22px -6px rgba(var(--nav-glow), 0.55),
+    0 0 18px -2px rgba(var(--nav-glow), 0.35) !important;
+}
+
+.main-navbar .ll-btn-3d:active,
+.ll-nav-btn:active,
+.ngo-nav-logout:active {
+  transform: translateY(0) scale(0.98);
+  box-shadow: 0 2px 8px -4px rgba(var(--nav-glow), 0.5) !important;
+}
+
+/* Primary CTA gets a slow ambient pulse to draw the eye */
+.main-navbar .ll-btn-3d-primary:hover {
+  animation: nav-pulse 1.8s ease-in-out infinite;
+}
+
+/* In dark mode the primary CTA is emerald, so it glows emerald */
+html[data-theme="dark"] .main-navbar .ll-btn-3d-primary,
+html.dark .main-navbar .ll-btn-3d-primary {
+  --nav-glow: 16, 185, 129;
+}
+
+/* Logout glows red instead of brand colour */
+.main-navbar .ll-btn-logout:hover,
+.ngo-nav-logout:hover {
+  box-shadow:
+    0 0 0 1px rgba(220, 38, 38, 0.3),
+    0 8px 22px -6px rgba(220, 38, 38, 0.55),
+    0 0 18px -2px rgba(220, 38, 38, 0.35) !important;
+}
+
+/* --------------------------------------------------------------------------
+   3. Theme toggle
+   -------------------------------------------------------------------------- */
+.ll-theme-toggle {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.2s ease,
+    color 0.2s ease !important;
+}
+
+.ll-theme-toggle svg {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.ll-theme-toggle:hover {
+  transform: translateY(-1px);
+  border-color: var(--nav-accent) !important;
+  color: var(--nav-accent) !important;
+  box-shadow: 0 0 0 3px rgba(var(--nav-glow), 0.12), 0 0 16px rgba(var(--nav-glow), 0.4);
+}
+
+.ll-theme-toggle:hover svg {
+  transform: rotate(35deg) scale(1.1);
+}
+
+/* --------------------------------------------------------------------------
+   Keyframes
+   -------------------------------------------------------------------------- */
+@keyframes nav-shimmer {
+  from { transform: translateX(-120%); }
+  to   { transform: translateX(120%); }
+}
+
+@keyframes nav-pulse {
+  0%, 100% {
+    box-shadow:
+      0 0 0 1px rgba(var(--nav-glow), 0.25),
+      0 8px 22px -6px rgba(var(--nav-glow), 0.55),
+      0 0 14px -2px rgba(var(--nav-glow), 0.3);
+  }
+  50% {
+    box-shadow:
+      0 0 0 1px rgba(var(--nav-glow), 0.35),
+      0 10px 26px -6px rgba(var(--nav-glow), 0.7),
+      0 0 26px 0 rgba(var(--nav-glow), 0.45);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Accessibility: respect reduced-motion preferences
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .main-navbar .nav-link,
+  .main-navbar .nav-link::after,
+  .ll-nav-item,
+  .ll-nav-item::after,
+  .ngo-nav-links a,
+  .ngo-nav-links a::after,
+  .main-navbar .ll-btn-3d,
+  .ll-nav-btn,
+  .ngo-nav-logout,
+  .ll-theme-toggle,
+  .ll-theme-toggle svg {
+    transition: none !important;
+  }
+
+  .main-navbar .ll-btn-3d:hover::before,
+  .ll-nav-btn:hover::before,
+  .ngo-nav-logout:hover::before,
+  .main-navbar .ll-btn-3d-primary:hover {
+    animation: none !important;
+  }
+
+  .main-navbar .ll-btn-3d:hover,
+  .ll-nav-btn:hover,
+  .ngo-nav-logout:hover,
+  .ll-theme-toggle:hover,
+  .ll-theme-toggle:hover svg {
+    transform: none !important;
+  }
+}

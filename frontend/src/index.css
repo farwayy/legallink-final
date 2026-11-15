@@ -1,0 +1,487 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400;1,600&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300&family=Marcellus&family=Alex+Brush&family=Great+Vibes&family=Allura&family=Bodoni+Moda:wght@500;600;700&display=swap');
+
+/* LegalLink wordmark (the name beside the logo) — one rule for every
+   navbar, footer and portal. To change the brand font, change it here. */
+.brand-signature {
+  font-family: 'Bodoni Moda', 'Playfair Display', Georgia, serif !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1 !important;
+  font-size: 1.6rem !important;
+  white-space: nowrap;
+}
+footer .brand-signature,
+.lx-footer-sig.brand-signature {
+  font-size: 2.1rem !important;
+}
+
+:root {
+  /* Primary Brand: Deep Forest / Legal Green */
+  --primary-brand: #1E3F2E;
+  --primary-hover: #152E22;
+  --primary-active: #0F2219;
+  --primary-tint: #F0FDF4;
+
+  /* Accent: Warm Muted Gold / Bronze */
+  --accent-gold: #C5A059;
+  --accent-hover: #B38E46;
+  --accent-tint: #FEFCE8;
+
+  /* Neutrals */
+  --bg-light: #F8FAFC;
+  --bg-card: #FFFFFF;
+  --text-primary: #0F172A;
+  --text-secondary: #475569;
+  --text-muted: #66756D;
+  --border-hairline: #E2E8F0;
+
+  /* Semantic Status Colors */
+  --status-success: #059669;
+  --status-warning: #D97706;
+  --status-danger: #DC2626;
+  --status-active: #2563EB;
+
+  /* Typography */
+  --font-serif: 'Playfair Display', 'Merriweather', Georgia, serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  /* Elevation */
+  --card-radius: 12px;
+  --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.07), 0 1px 2px -1px rgba(0, 0, 0, 0.05);
+  --card-shadow-hover: 0 4px 6px -1px rgba(0, 0, 0, 0.08), 0 2px 4px -2px rgba(0, 0, 0, 0.04);
+}
+
+html[data-theme="dark"],
+body.dark,
+[data-theme="dark"] {
+  /* Primary Brand: soft forest green that reads well on dark */
+  --primary-brand: #6FBF95;
+  --primary-hover: #5AAE83;
+  --primary-active: #4A9A72;
+  --primary-tint: rgba(111, 191, 149, 0.12);
+
+  /* Accent Gold */
+  --accent-gold: #D4AF37;
+  --accent-hover: #F5E6BE;
+  --accent-tint: rgba(212, 175, 55, 0.12);
+
+  /* Neutrals for Dark Mode */
+  --bg-light: #07110D;
+  --bg-card: #0E1A15;
+  --text-primary: #F1F5F2;
+  --text-secondary: #C9D6CF;
+  --text-muted: #8FA39A;
+  --border-hairline: #1C2E26;
+
+  /* Dark Elevation */
+  --card-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+  --card-shadow-hover: 0 12px 28px rgba(0, 0, 0, 0.7), 0 0 16px rgba(212, 175, 55, 0.15);
+}
+
+.marcellus-regular {
+  font-family: "Marcellus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  margin: 0;
+  background-color: var(--bg-light);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings scale */
+h1, .h1 {
+  font-family: var(--font-serif);
+  font-size: 2rem; /* 32px */
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+h2, .h2 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+}
+
+h3, .h3 {
+  font-family: var(--font-serif);
+  font-size: 1.25rem; /* 20px */
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+p, .body-text {
+  font-family: var(--font-sans);
+  font-size: 0.938rem; /* 15px */
+  line-height: 1.6;
+  color: var(--text-secondary);
+}
+
+small, .label-text {
+  font-size: 0.813rem; /* 13px */
+  color: var(--text-muted);
+}
+
+/* Legal Cards */
+.legal-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-hairline);
+  border-radius: var(--card-radius);
+  box-shadow: var(--card-shadow);
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.legal-card:hover {
+  box-shadow: var(--card-shadow-hover);
+  border-color: #CBD5E1;
+}
+
+/* Legal Buttons */
+.btn-legal-primary {
+  background-color: var(--primary-brand);
+  color: #FFFFFF !important;
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.938rem;
+  padding: 10px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease-in-out;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  text-decoration: none;
+}
+
+.btn-legal-primary:hover {
+  background-color: var(--primary-hover);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #FFFFFF !important;
+}
+
+.btn-legal-primary:active {
+  background-color: var(--primary-active);
+}
+
+.btn-legal-secondary {
+  background-color: #FFFFFF;
+  color: var(--text-secondary) !important;
+  border: 1px solid var(--border-hairline);
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.938rem;
+  padding: 9px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.15s ease-in-out;
+  text-decoration: none;
+}
+
+.btn-legal-secondary:hover {
+  background-color: #F8FAFC;
+  color: var(--text-primary) !important;
+  border-color: #CBD5E1;
+}
+
+/* Semantic Badges */
+.badge-semantic {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 10px;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+}
+
+.badge-success {
+  background-color: #ECFDF5;
+  color: #065F46;
+  border: 1px solid #A7F3D0;
+}
+
+.badge-warning {
+  background-color: #FFFBEB;
+  color: #92400E;
+  border: 1px solid #FDE68A;
+}
+
+.badge-danger {
+  background-color: #FEF2F2;
+  color: #991B1B;
+  border: 1px solid #FECACA;
+}
+
+.badge-info {
+  background-color: #EFF6FF;
+  color: #1E40AF;
+  border: 1px solid #BFDBFE;
+}
+
+.badge-neutral {
+  background-color: #F1F5F9;
+  color: #475569;
+  border: 1px solid #E2E8F0;
+}
+
+/* Modern Pill Tabs */
+.legal-pill-tabs {
+  display: flex;
+  gap: 8px;
+  padding: 4px;
+  background: #F1F5F9;
+  border-radius: 10px;
+  border: 1px solid #E2E8F0;
+  width: fit-content;
+}
+
+.legal-pill-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 18px;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #64748B;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.legal-pill-tab:hover {
+  color: #0F172A;
+}
+
+.legal-pill-tab.active {
+  background: var(--primary-brand);
+  color: #FFFFFF;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.legal-pill-chip {
+  display: inline-block;
+  padding: 2px 7px;
+  border-radius: 9999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  background: #E2E8F0;
+  color: #334155;
+}
+
+.legal-pill-tab.active .legal-pill-chip {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+}
+
+/* Form Inputs */
+.legal-input {
+  height: 46px;
+  background-color: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 8px;
+  padding: 10px 14px;
+  font-size: 0.938rem;
+  color: #0F172A;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.legal-input:focus {
+  outline: none;
+  border-color: var(--primary-brand);
+  box-shadow: 0 0 0 3px rgba(30, 63, 46, 0.12);
+}
+
+.legal-label {
+  display: block;
+  font-size: 0.84rem;
+  font-weight: 600;
+  color: #334155;
+  margin-bottom: 6px;
+  text-transform: capitalize;
+}
+
+/* Custom scrollbar for practice areas */
+div[style*="overflowX: auto"]::-webkit-scrollbar {
+  height: 8px;
+}
+
+div[style*="overflowX: auto"]::-webkit-scrollbar-track {
+  background: #e0e0e0;
+  border-radius: 10px;
+}
+
+div[style*="overflowX: auto"]::-webkit-scrollbar-thumb {
+  background: #000000;
+  border-radius: 10px;
+}
+
+/* Hide scrollbar completely */
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.service-image {
+  transition: transform 0.5s ease;
+}
+
+.service-title {
+  transition: color 0.3s ease;
+}
+
+.service-bottom {
+  transition: color 0.3s ease;
+}
+
+/* Gradient Button Style */
+.btn-grad {
+  background-image: linear-gradient(to right, #1F1C2C 0%, #928DAB 51%, #1F1C2C 100%);
+  margin: 10px 0;
+  padding: 12px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  border-radius: 10px;
+  display: block;
+  width: 100%;
+  font-family: 'Marcellus', serif;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Sign up link style */
+.signup-link {
+  color: #000000;
+  font-weight: 600;
+  font-family: 'Marcellus', serif;
+  font-size: 16px;
+  text-decoration: none;
+  border-bottom: 1px solid #000000;
+}
+
+.signup-link:hover {
+  opacity: 0.7;
+}
+
+.login-text {
+  color: #000000;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.login-link {
+    color: #000000;
+    font-weight: 600;
+    font-family: 'Marcellus', serif;
+    font-size: 16px;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
+  }
+
+  .signup-text {
+    color: #000000;
+    margin-bottom: 5px;
+    font-size: 14px;
+  }
+
+/* Curvy Pill Borders for Google Sign In & Sign Up Button */
+.google-curvy-pill,
+.google-curvy-pill > div,
+.google-curvy-pill iframe,
+.google-signin-wrapper iframe,
+div[role="button"][aria-labelledby*="button-label"] {
+  border-radius: 9999px !important;
+}
+
+/* ==========================================================================
+   ALWAYS-DARK SURFACES
+   Brand banners, footers etc. stay dark in both themes. Global light-mode
+   text rules skip anything inside .ll-on-dark so their light text survives.
+   ========================================================================== */
+.ll-on-dark {
+  color: #F8FAFC;
+}
+
+/* ==========================================================================
+   THEME-AWARE ALERT BANNERS
+   ========================================================================== */
+.ll-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  border: 1px solid;
+  border-left-width: 5px;
+}
+.ll-alert-icon { flex-shrink: 0; margin-top: 2px; }
+.ll-alert-title { display: block; font-size: 14.5px; font-weight: 700; }
+.ll-alert-text { margin: 4px 0 0 0; font-size: 13.5px; line-height: 1.5; }
+
+.ll-alert-warning { background: #FFFBEB; border-color: #FDE68A; border-left-color: #D97706; }
+.ll-alert-warning .ll-alert-icon { color: #D97706; }
+.ll-alert-warning .ll-alert-title,
+.ll-alert-warning .ll-alert-text strong { color: #92400E; }
+.ll-alert-warning .ll-alert-text { color: #B45309; }
+
+html[data-theme="dark"] .ll-alert-warning { background: rgba(217, 119, 6, 0.1); border-color: rgba(251, 191, 36, 0.28); border-left-color: #F59E0B; }
+html[data-theme="dark"] .ll-alert-warning .ll-alert-icon { color: #FBBF24; }
+html[data-theme="dark"] .ll-alert-warning .ll-alert-title,
+html[data-theme="dark"] .ll-alert-warning .ll-alert-text strong { color: #FDE68A; }
+html[data-theme="dark"] .ll-alert-warning .ll-alert-text { color: #FCD34D; }
+
+/* ==========================================================================
+   DARK MODE: shared component surfaces that were light-only
+   ========================================================================== */
+html[data-theme="dark"] .legal-pill-tabs { background: #0B1612; border-color: #1C2E26; }
+html[data-theme="dark"] .legal-pill-tab { color: #8FA39A; }
+html[data-theme="dark"] .legal-pill-tab:hover { color: #F1F5F2; }
+html[data-theme="dark"] .legal-pill-tab.active { background: #1F4535; color: #FFFFFF; }
+html[data-theme="dark"] .legal-pill-chip { background: rgba(255, 255, 255, 0.08); color: #C9D6CF; }
+html[data-theme="dark"] .btn-legal-secondary { background-color: #0E1A15; border-color: #2A4035; }
+html[data-theme="dark"] .btn-legal-secondary:hover { background-color: #15241D; }
+html[data-theme="dark"] .legal-input { background-color: #0B1612; border-color: #2A4035; color: #F1F5F2; }
+html[data-theme="dark"] .legal-label { color: #C9D6CF; }
+html[data-theme="dark"] .legal-card:hover { border-color: #2A4035; }
+html[data-theme="dark"] .badge-neutral { background-color: rgba(255, 255, 255, 0.06); color: #C9D6CF; border-color: #2A4035; }

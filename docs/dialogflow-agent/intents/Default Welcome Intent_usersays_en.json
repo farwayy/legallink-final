@@ -1,0 +1,132 @@
+[
+  {
+    "id": "a6cfc947-4790-48c8-8977-699d3d39e3b0",
+    "data": [
+      {
+        "text": "hi",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "85731405-3d0c-4784-8aa2-25d875aa9439",
+    "data": [
+      {
+        "text": "hello",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "3a31039a-edfa-47d7-a5be-bf8677c87742",
+    "data": [
+      {
+        "text": "assalam o alaikum",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "46980da7-36e3-42fd-811d-91ea2ef4b60f",
+    "data": [
+      {
+        "text": "aoa",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "03c0a64d-ec55-4a0e-8c63-c95891bb1f2a",
+    "data": [
+      {
+        "text": "salam",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "1ccdf828-82c4-46d4-8d4b-c40345039dc0",
+    "data": [
+      {
+        "text": "hey",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "4da68ae5-3718-4842-af14-748587ff53b5",
+    "data": [
+      {
+        "text": "help",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "9a145e27-247a-4f31-964b-4b7b8fd13179",
+    "data": [
+      {
+        "text": "need legal help",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "7c3ec005-37d6-428b-bbdd-5f0aae659f68",
+    "data": [
+      {
+        "text": "madad chahiye",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  },
+  {
+    "id": "c9e26952-2ee7-4bf7-9d33-4cb8c3acc98b",
+    "data": [
+      {
+        "text": "start",
+        "userDefined": false
+      }
+    ],
+    "isTemplate": false,
+    "count": 0,
+    "lang": "en",
+    "updated": 0
+  }
+]

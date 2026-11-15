@@ -1,0 +1,55 @@
+[
+  {
+    "value": "Family Law",
+    "synonyms": [
+      "Family Law",
+      "khula",
+      "divorce",
+      "custody",
+      "maintenance",
+      "talaq"
+    ]
+  },
+  {
+    "value": "Criminal Law",
+    "synonyms": [
+      "Criminal Law",
+      "fir",
+      "bail",
+      "pre arrest",
+      "post arrest",
+      "crpc"
+    ]
+  },
+  {
+    "value": "Domestic Violence",
+    "synonyms": [
+      "Domestic Violence",
+      "abuse",
+      "beating",
+      "tashaddud",
+      "protection order"
+    ]
+  },
+  {
+    "value": "Property Law",
+    "synonyms": [
+      "Property Law",
+      "tenant",
+      "rent",
+      "landlord",
+      "eviction",
+      "qabza"
+    ]
+  },
+  {
+    "value": "Labor Law",
+    "synonyms": [
+      "Labor Law",
+      "wages",
+      "salary",
+      "termination",
+      "job"
+    ]
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "id": "aa131840-e51e-4f4d-aaf6-d1c9643e7842",
+  "name": "Default Welcome Intent",
+  "auto": true,
+  "contexts": [],
+  "responses": [
+    {
+      "resetContexts": false,
+      "action": "input.welcome",
+      "affectedContexts": [],
+      "parameters": [],
+      "messages": [
+        {
+          "type": 0,
+          "lang": "en",
+          "speech": "Assalam-o-Alaikum! Welcome to LegalLink AI. I am your specialized legal assistant for Pakistani law. You can ask your legal questions in English or Roman Urdu (e.g., family disputes, property issues, criminal matters, or domestic violence)."
+        }
+      ],
+      "defaultResponsePlatforms": {},
+      "speech": []
+    }
+  ],
+  "priority": 500000,
+  "webhookUsed": false,
+  "webhookForSlotFilling": false,
+  "fallbackIntent": false,
+  "events": [
+    {
+      "name": "WELCOME"
+    }
+  ]
+}
