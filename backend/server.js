@@ -35,8 +35,6 @@ const paymentRoutes = require('./routes/paymentRoutes');
 // Import real-time manager (simplified version)
 const RealTimeManager = require('./sockets/realtimeManager');
 
-const ML_SERVICE_URL = process.env.ML_SERVICE_URL || 'http://localhost:8001';
-
 const app = express();
 const server = http.createServer(app);
 
