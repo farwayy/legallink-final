@@ -290,7 +290,7 @@ const AdminLayout = ({ children, breadcrumb = "Overview", activeNav = "overview"
       {/* ───────── Sidebar ───────── */}
       <aside className="ax-side" aria-label="Admin navigation">
         <Link to="/admin/dashboard" className="ax-brand">
-          <img src="/images/legallink-logo.png" alt="" />
+          <img src="/images/logo.png" alt="" />
           <span className="ax-brand-text">
             <strong>LegalLink</strong>
             <span>Admin console</span>

@@ -185,6 +185,13 @@ const startServer = async () => {
       if (/unsupported file format|only .* (images|files|documents)/i.test(msg)) {
         return res.status(400).json({ message: msg });
       }
+      // Cloudinary refused the file itself (e.g. a damaged or unusual image)
+      if (/file format .* not allowed|invalid image file|unsupported .*format/i.test(msg)) {
+        return res.status(400).json({
+          message: "This file couldn't be read as a PDF, Word document or image. Please save it again as PDF, JPG or PNG and try once more.",
+          error: msg
+        });
+      }
       // Cloudinary refused or couldn't be reached
       if ((err && (err.http_code || /cloudinary|api_key|api_secret|signature/i.test(msg)))) {
         return res.status(502).json({

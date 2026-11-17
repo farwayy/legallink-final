@@ -246,7 +246,7 @@ const LawyerLogin = () => {
               {/* Crest / Logo */}
               <div style={{ display: "inline-flex", alignItems: "center", gap: "12px", marginBottom: "28px" }}>
                 <img
-                  src="/images/legallink-logo.png"
+                  src="/images/logo.png"
                   alt="LegalLink Logo"
                   style={{
                     height: "48px",

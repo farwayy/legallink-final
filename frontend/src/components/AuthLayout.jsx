@@ -52,7 +52,7 @@ const AuthLayout = ({
 
         <div className="auth-brand-content">
           <Link to="/" className="auth-brand-logo">
-            <img src="/images/legallink-logo1.png" alt="" />
+            <img src="/images/logo.png" alt="" />
             <span>LegalLink</span>
           </Link>
 
@@ -93,7 +93,7 @@ const AuthLayout = ({
       <main className="auth-panel">
         <header className="auth-panel-head">
           <Link to="/" className="auth-panel-head-logo">
-            <img src="/images/legallink-logo1.png" alt="" />
+            <img src="/images/logo.png" alt="" />
             <span>LegalLink</span>
           </Link>
           <div className="auth-panel-head-actions">

@@ -18,7 +18,7 @@ const AdminNavbar = () => {
           {/* Logo */}
           <Link to="/admin/dashboard" className="d-flex align-items-center text-decoration-none">
             <img
-              src="/images/legallink-logo1.png"
+              src="/images/logo.png"
               alt="LegalLink Logo"
               style={{ width: '50px', height: '50px', objectFit: 'contain' }}
               onError={(e) => {

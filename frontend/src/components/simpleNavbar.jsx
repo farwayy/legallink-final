@@ -30,7 +30,7 @@ const SimpleNavbar = () => {
             {/* Logo */}
             <Link to="/" className="d-flex align-items-center text-decoration-none gap-2">
               <img 
-                src="/images/legallink-logo1.png" 
+                src="/images/logo.png" 
                 alt="LegalLink Logo"
                 style={{ height: '40px', width: 'auto', objectFit: 'contain' }}
               />

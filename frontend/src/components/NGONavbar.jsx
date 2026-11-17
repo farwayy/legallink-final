@@ -84,7 +84,7 @@ const NGONavbar = () => {
       <div className="cp-nav-inner">
         <Link to="/ngo/dashboard" className="cp-brand">
           <span className="cp-brand-mark">
-            <img src="/images/legallink-logo.png" alt="" />
+            <img src="/images/logo.png" alt="" />
           </span>
           <span className="cp-brand-text">
             <span className="cp-brand-name brand-signature">LegalLink</span>

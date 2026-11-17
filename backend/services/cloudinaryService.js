@@ -42,6 +42,21 @@ const createLocalStorage = (subfolder = '') => multer.diskStorage({
   }
 });
 
+// Images are often a different format inside than their name says
+// (e.g. a WebP saved from a website and renamed to .png). Cloudinary checks the
+// real contents, so accept the common image formats and store the image in the
+// format its file name says.
+const IMAGE_SOURCE_FORMATS = ['jpg', 'jpeg', 'png', 'webp', 'gif', 'bmp', 'tiff', 'heic', 'heif', 'avif'];
+const imageOptions = (ext, allowedFormats) => {
+  const target = ext === 'jpeg' ? 'jpg' : ext;
+  const allowed = Array.from(new Set([...(allowedFormats || []), ...IMAGE_SOURCE_FORMATS]))
+    .filter((f) => !['pdf', 'doc', 'docx'].includes(f));
+  return {
+    allowed_formats: allowed,
+    ...(IMAGE_SOURCE_FORMATS.includes(target) ? { format: target } : {})
+  };
+};
+
 // ── Cloudinary Storage Generators ───────────────────────────────────────────
 const createCloudinaryStorage = (folderName, allowedFormats = ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx']) => {
   return new CloudinaryStorage({
@@ -57,7 +72,7 @@ const createCloudinaryStorage = (folderName, allowedFormats = ['jpg', 'jpeg', 'p
         // Profile photos stay public.
         type: folderName.includes('avatars') ? 'upload' : 'authenticated',
         resource_type: isPdfOrDoc ? 'raw' : 'auto',
-        allowed_formats: isPdfOrDoc ? undefined : allowedFormats,
+        ...(isPdfOrDoc ? {} : imageOptions(ext, allowedFormats)),
         public_id: `${Date.now()}-${path.parse(file.originalname).name.replace(/[^a-zA-Z0-9]/g, '_')}${isPdfOrDoc ? '.' + ext : ''}`
       };
     }
@@ -131,7 +146,7 @@ const getLawyerSignupUploader = () => {
             // Bar Council documents are private; the profile photo is public
             type: isDoc ? 'authenticated' : 'upload',
             resource_type: isRaw ? 'raw' : 'auto',
-            allowed_formats: isRaw ? undefined : (isDoc ? ['jpg', 'jpeg', 'png', 'pdf', 'doc', 'docx'] : ['jpg', 'jpeg', 'png', 'webp']),
+            ...(isRaw ? {} : imageOptions(ext, isDoc ? ['jpg', 'jpeg', 'png'] : ['jpg', 'jpeg', 'png', 'webp'])),
             public_id: `${Date.now()}-${path.parse(file.originalname).name.replace(/[^a-zA-Z0-9]/g, '_')}${isRaw ? '.' + ext : ''}`
           };
         }
